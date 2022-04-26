@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Task from "./components/Task";
+import Fetcher from "./components/Fetcher";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -47,6 +48,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Fetcher />
       <button
         onClick={() => {
           setShowCompleted((oldState) => !oldState);
